@@ -34,7 +34,7 @@ class ListViewBuilderScreen extends StatelessWidget {
             SizedBox(
               height: 200,
               child: ListView.builder(
-                itemCount: 5, // Kotokkhon cholbe
+                itemCount: 5, // Kotobar cholbe
                 itemBuilder: (context, i) {
                   return ListTile(
                     leading: CircleAvatar(backgroundColor: Colors.purple),
