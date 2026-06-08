@@ -1,12 +1,12 @@
-//import 'package:assignment_02/ListView_builder.dart';
-import 'package:assignment_02/c_01.dart';
+import 'package:assignment_02/text_widgets.dart';
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'c_02.dart';
-import 'ListView_builder.dart';
-import 'c_03.dart';
-//import 'c_01.dart';
+
 void main() async {
-  runApp(const MyApp());
+  runApp(
+    DevicePreview(enabled: !kReleaseMode, builder: (context) => const MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -14,6 +14,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: C03());
+    return MaterialApp(
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+      home: const TextFieldWidget(),
+    );
   }
 }
