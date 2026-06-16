@@ -1,3 +1,4 @@
+import 'package:assignment_02/custom_settings_list.dart';
 import 'package:flutter/material.dart';
 
 class CardSettingsScreen extends StatelessWidget {
@@ -105,192 +106,21 @@ class CardSettingsScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 14),
               ),
               SizedBox(height: 20),
-              Container(
-                height: 60,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: const Color.fromARGB(255, 211, 210, 210),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 10,
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(Icons.message_outlined),
-                      SizedBox(width: 5),
-                      Text(
-                        'Messages',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Spacer(),
-                      Icon(Icons.keyboard_arrow_right),
-                    ],
-                  ),
-                ),
+              // Custom widgets banano hoyeche and seta custom_settings_list.dart file e ache and ekhan theke call kore use kortechi
+              CustomSettingsList(name: 'Message', icon: Icons.message_outlined),
+              SizedBox(height: 20),
+              CustomSettingsList(name: 'My Grab', icon: Icons.handshake),
+              SizedBox(height: 20),
+              CustomSettingsList(name: 'My Share', icon: Icons.share),
+              SizedBox(height: 20),
+              CustomSettingsList(
+                name: 'Terms of Service',
+                icon: Icons.security,
               ),
               SizedBox(height: 20),
-              Container(
-                height: 60,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: const Color.fromARGB(255, 211, 210, 210),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 10,
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(Icons.handshake),
-                      SizedBox(width: 5),
-                      Text(
-                        'My Grabs',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Spacer(),
-                      Icon(Icons.keyboard_arrow_right),
-                    ],
-                  ),
-                ),
-              ),
+              CustomSettingsList(name: 'Delete Account', icon: Icons.delete),
               SizedBox(height: 20),
-              Container(
-                height: 60,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: const Color.fromARGB(255, 211, 210, 210),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 10,
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(Icons.telegram_outlined),
-                      SizedBox(width: 5),
-                      Text(
-                        'My Shares',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Spacer(),
-                      Icon(Icons.keyboard_arrow_right),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
-              Container(
-                height: 60,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: const Color.fromARGB(255, 211, 210, 210),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 10,
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(Icons.security),
-                      SizedBox(width: 5),
-                      Text(
-                        'Terms of Service',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Spacer(),
-                      Icon(Icons.keyboard_arrow_right),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
-              Container(
-                height: 60,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: const Color.fromARGB(255, 211, 210, 210),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 10,
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.delete,
-                        color: const Color.fromARGB(255, 163, 16, 6),
-                      ),
-                      SizedBox(width: 5),
-                      Text(
-                        'Delete Account',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: const Color.fromARGB(255, 163, 16, 6),
-                        ),
-                      ),
-                      Spacer(),
-                      Icon(
-                        Icons.keyboard_arrow_right,
-                        color: const Color.fromARGB(255, 163, 16, 6),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
-              Container(
-                height: 60,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: const Color.fromARGB(255, 211, 210, 210),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 10,
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(Icons.logout),
-                      SizedBox(width: 5),
-                      Text(
-                        'Logout',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Spacer(),
-                      Icon(Icons.keyboard_arrow_right),
-                    ],
-                  ),
-                ),
-              ),
+              CustomSettingsList(name: 'Logout', icon: Icons.logout),
             ],
           ),
         ),

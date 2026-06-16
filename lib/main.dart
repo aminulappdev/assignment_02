@@ -1,5 +1,5 @@
-import 'package:assignment_02/grid_view_builder.dart';
-import 'package:assignment_02/text_widgets.dart';
+
+import 'package:assignment_02/custom_widget.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
